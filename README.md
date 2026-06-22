@@ -1,30 +1,31 @@
-# agentic-ai-training
-Purpose
+# Agentic AI Training
+
+## Purpose
 
 This repository is created as part of the Agentic AI Training Program.
 
 It will be used for:
 
-Weekly learning assignments
-Coding exercises
-Agentic AI project development
-Documentation and progress tracking
-Code reviews and collaboration
-Learning Objectives
+- Weekly learning assignments
+- Coding exercises
+- Agentic AI project development
+- Documentation and progress tracking
+- Code reviews and collaboration
 
-Through this training, I aim to:
+## Learning Objectives
 
-Understand Agentic AI concepts and architectures
-Build AI agents using modern frameworks
-Learn Git and GitHub workflows
-Develop production-ready AI applications
-Practice software engineering best practices
-Collaborate using Issues, Branches, and Pull Requests
-Repository Structure
-docs/ → Notes and documentation
-assignments/ → Weekly assignments
-projects/ → Training projects
-agents/ → AI agent implementations
-tools/ → Supporting utilities and tools
-prompts/ → Prompt engineering experiments
-tests/ → Unit and integration tests
+- Learn Agentic AI concepts
+- Build AI agents
+- Learn Git and GitHub workflows
+- Practice prompt engineering
+- Develop real-world AI projects
+
+## Repository Structure
+
+- docs/
+- assignments/
+- projects/
+- agents/
+- tools/
+- prompts/
+- tests/

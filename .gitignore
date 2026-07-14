@@ -1,0 +1,21 @@
+# Virtual environment
+.venv/
+venv/
+ENV/
+
+# Secrets and Local Configurations
+.env
+
+# Python Caches & Compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Databases and Local State Data
+data/chroma_db/
+data/checkpoints.db
+
+# OS generated files
+.DS_Store
+Thumbs.db

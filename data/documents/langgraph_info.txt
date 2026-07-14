@@ -1,0 +1,9 @@
+LangGraph is a library developed by LangChain for building stateful, multi-actor applications with LLMs. It is designed to model agent workflows as graphs, where nodes represent actions (like LLM calls, tool execution, or data processing) and edges represent the control flow between those actions.
+
+Unlike linear chains, LangGraph supports cyclical execution, enabling agents to run in loops, ask for human-in-the-loop validation, and maintain a persistent state across multiple steps using checkpointers.
+
+Key features of LangGraph include:
+- Stateful Graphs: Multiple nodes can read and write to a shared state.
+- Cyclical Graphs: Supports loops which are essential for agentic behaviors like reflection and planning.
+- Human-in-the-loop: Pause execution and resume after human approval or input.
+- Streaming: Stream nodes, states, or LLM tokens in real-time.

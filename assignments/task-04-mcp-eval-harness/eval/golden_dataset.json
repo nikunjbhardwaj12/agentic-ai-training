@@ -1,0 +1,134 @@
+[
+  {
+    "id": "q01",
+    "question": "What does RLHF stand for and what are its three stages?",
+    "expected_facts": [
+      "Reinforcement Learning from Human Feedback",
+      "supervised fine-tuning",
+      "reward model training",
+      "PPO"
+    ],
+    "source_doc": "sample_ml.txt"
+  },
+  {
+    "id": "q02",
+    "question": "What is the primary role of a vector database index like HNSW?",
+    "expected_facts": [
+      "Hierarchical Navigable Small World",
+      "approximate nearest neighbor search",
+      "sub-linear time",
+      "embeddings"
+    ],
+    "source_doc": "vector_databases.md"
+  },
+  {
+    "id": "q03",
+    "question": "Explain the difference between dense and sparse embeddings in semantic search.",
+    "expected_facts": [
+      "dense captures semantic meaning",
+      "sparse relies on exact keyword matching",
+      "BM25",
+      "high-dimensional vectors"
+    ],
+    "source_doc": "vector_databases.md"
+  },
+  {
+    "id": "q04",
+    "question": "How does the LangGraph Send API enable dynamic task execution loops?",
+    "expected_facts": [
+      "Send API",
+      "dynamic routing",
+      "map-reduce operations",
+      "parallel node spawning"
+    ],
+    "source_doc": "langgraph_send_api.md"
+  },
+  {
+    "id": "q05",
+    "question": "What are the common strategies used to mitigate hallucinations in a RAG system?",
+    "expected_facts": [
+      "retrieval grounding",
+      "source citations",
+      "system prompt constraints",
+      "temperature adjustments"
+    ],
+    "source_doc": "prompt_engineering.md"
+  },
+  {
+    "id": "q06",
+    "question": "What is the purpose of the hierarchical structure in the HNSW algorithm?",
+    "expected_facts": [
+      "multi-layer graph",
+      "skip lists similarity",
+      "fast global search on top layers",
+      "local convergence on bottom layers"
+    ],
+    "source_doc": "vector_databases.md"
+  },
+  {
+    "id": "q07",
+    "question": "Describe the core loop of a ReAct style agent system framework.",
+    "expected_facts": [
+      "Reasoning and Acting",
+      "thought observation loop",
+      "dynamic tool invocation",
+      "stop conditions"
+    ],
+    "source_doc": "sample_ai.txt"
+  },
+  {
+    "id": "q08",
+    "question": "What is maximum marginal relevance (MMR) and why is it used during document retrieval?",
+    "expected_facts": [
+      "MMR",
+      "balance relevance and diversity",
+      "reduce redundancy",
+      "re-ranking phase"
+    ],
+    "source_doc": "prompt_engineering.md"
+  },
+  {
+    "id": "q09",
+    "question": "How does self-RAG improve standard pipeline architectures?",
+    "expected_facts": [
+      "self-reflection tokens",
+      "evaluate retrieval necessity",
+      "assess generation quality",
+      "critique loops"
+    ],
+    "source_doc": "sample_ai.txt"
+  },
+  {
+    "id": "q10",
+    "question": "What parameters typically dictate the text chunking strategy during data ingestion?",
+    "expected_facts": [
+      "chunk size",
+      "chunk overlap",
+      "semantic boundaries",
+      "token limits"
+    ],
+    "source_doc": "prompt_engineering.md"
+  },
+  {
+    "id": "q11",
+    "question": "What role does state conservation play inside LangGraph nodes?",
+    "expected_facts": [
+      "immutable state updates",
+      "state keys synchronization",
+      "thread checkpoints",
+      "message appending"
+    ],
+    "source_doc": "langgraph_send_api.md"
+  },
+  {
+    "id": "q12",
+    "question": "Why is PPO preferred over vanilla policy gradient methods in RLHF?",
+    "expected_facts": [
+      "Proximal Policy Optimization",
+      "clipped surrogate objective",
+      "training stability",
+      "prevent catastrophic policy collapse"
+    ],
+    "source_doc": "sample_ml.txt"
+  }
+]

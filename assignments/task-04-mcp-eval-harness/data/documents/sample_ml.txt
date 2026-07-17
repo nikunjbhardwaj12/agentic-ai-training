@@ -1,0 +1,32 @@
+Reinforcement Learning from Human Feedback (RLHF)
+
+Reinforcement Learning from Human Feedback (RLHF) is the technique used to align large
+language models with human preferences. It consists of three main stages:
+
+1. Supervised fine-tuning (SFT): A pretrained base language model is fine-tuned on a
+   curated dataset of high-quality human demonstrations, teaching it to follow
+   instructions and produce well-formed responses.
+
+2. Reward model training: Human labelers rank multiple model outputs for the same
+   prompt from best to worst. These rankings are used to train a separate reward
+   model that learns to predict a scalar score representing human preference for
+   any given response.
+
+3. Reinforcement learning via PPO: The fine-tuned language model is further optimized
+   using Proximal Policy Optimization (PPO), a reinforcement learning algorithm that
+   updates the model's policy to maximize the reward predicted by the reward model,
+   while staying close to the original fine-tuned policy.
+
+Why PPO instead of vanilla policy gradient methods
+
+Vanilla policy gradient methods update the policy directly using the raw gradient of
+expected reward, which can lead to very large, destabilizing updates — a single bad
+update can cause catastrophic policy collapse, where the model's behavior degrades
+sharply and does not recover.
+
+PPO addresses this with a clipped surrogate objective. Instead of allowing unlimited
+policy updates, PPO clips the ratio between the new and old policy probabilities within
+a small range (e.g., 0.8 to 1.2), which prevents the policy from moving too far in a
+single step. This clipping mechanism gives PPO much greater training stability than
+vanilla policy gradient methods, and is the main reason it is preferred for the
+reinforcement learning stage of RLHF.

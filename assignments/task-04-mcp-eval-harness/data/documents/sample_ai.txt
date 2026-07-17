@@ -1,0 +1,38 @@
+Agent Architectures: ReAct and Self-RAG
+
+## The ReAct Framework
+
+ReAct stands for Reasoning and Acting. It is a core loop for agent-style LLM systems
+in which the model interleaves reasoning traces with actions rather than producing
+either alone. At each step, the agent generates a "thought" explaining its reasoning,
+then decides on an "action" — typically a tool call — and receives an "observation"
+(the tool's result) in return.
+
+This forms a repeating thought-observation loop: think, act, observe, then think
+again based on the new information. Because tool invocation is decided dynamically
+at each step based on the model's current reasoning, ReAct supports dynamic tool
+invocation rather than a fixed, predetermined sequence of calls.
+
+The loop continues until the agent reaches one of its defined stop conditions —
+typically when it decides it has enough information to produce a final answer, or
+when a maximum number of steps is reached.
+
+## Self-RAG
+
+Self-RAG (Self-Reflective Retrieval-Augmented Generation) improves on standard RAG
+pipeline architectures by making retrieval and generation decisions adaptive rather
+than fixed. Standard RAG always retrieves a fixed number of chunks for every query
+and generates an answer directly from them, with no mechanism to check whether the
+retrieval was actually necessary or whether the generated answer is well-supported.
+
+Self-RAG introduces special self-reflection tokens that the model generates
+alongside its output. These tokens let the model:
+
+- Evaluate retrieval necessity — deciding whether retrieval is even needed for a
+  given query, rather than always retrieving by default.
+- Assess generation quality — critiquing whether its own draft response is
+  relevant, supported by the retrieved evidence, and useful.
+
+This produces critique loops, where the model can revise or discard a generation
+that fails its own self-assessment, leading to answers that are more faithful to
+the retrieved context than a standard, non-reflective RAG pipeline.

@@ -1,0 +1,22 @@
+# Virtual environment
+venv/
+.venv/
+
+# Python bytecode / cache
+__pycache__/
+*.pyc
+*.pyo
+agent/__pycache__/
+eval/__pycache__/
+mcp_server/__pycache__/
+
+# Environment variables — never commit real keys
+.env
+
+# Generated vector store (regenerate with: python ingest.py)
+data/chroma_db/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
